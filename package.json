@@ -1,12 +1,18 @@
 {
-  "name": "fraude-dashboard",
+  "name": "operational-risk-control-center",
   "version": "1.0.0",
   "private": true,
+  "description": "Dashboard privado con acceso seguro a Azure Blob Storage mediante identidad administrada",
+  "main": "server.js",
   "scripts": {
-    "build": "echo \"Dashboard estático listo para desplegar\"",
-    "start": "npx serve -s . -l 8080"
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
-    "serve": "^14.2.4"
+    "@azure/identity": "^4.6.0",
+    "@azure/storage-blob": "^12.27.0",
+    "express": "^4.21.2"
   }
 }
